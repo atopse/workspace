@@ -1,49 +1,112 @@
-<button class="btn btn-default" id="toggle-sidebar" type="button" (click)="eventCalled()">
-    &#9776;
-</button>
-<nav class="sidebar" [ngClass]="{sidebarPushRight: isActive}">
-    <ul class="list-group">
-        <a routerLink="/dashboard/home" [routerLinkActive]="['router-link-active']" class="list-group-item">
-            <i class="fa fa-fw fa-dashboard"></i> Dashboard
-        </a>
-        <a [routerLink]="['chart']" [routerLinkActive]="['router-link-active']" class="list-group-item">
-            <i class="fa fa-fw fa-bar-chart-o"></i> Charts
-        </a>
-        <a [routerLink]="['tables']" [routerLinkActive]="['router-link-active']" class="list-group-item">
-            <i class="fa fa-fw fa-table"></i> Tables
-        </a>
-        <a [routerLink]="['forms']" [routerLinkActive]="['router-link-active']" class="list-group-item">
-            <i class="fa fa-fw fa-edit"></i> Forms
-        </a>
-        <a [routerLink]="['element']" [routerLinkActive]="['router-link-active']" class="list-group-item">
-            <i class="fa fa-fw fa-desktop"></i> Bootstrap Elements
-        </a>
-        <a [routerLink]="['grid']" [routerLinkActive]="['router-link-active']" class="list-group-item">
-            <i class="fa fa-fw fa-wrench"></i> Bootstrap Grid
-        </a>
-        <a [routerLink]="['components']" [routerLinkActive]="['router-link-active']" class="list-group-item">
-            <i class="fa fa-th-list"></i> &nbsp;Component
-        </a>
-        <div class="nested-menu">
-            <a class="list-group-item" (click)="addExpandClass('pages')">
-                <span><i class="fa fa-plus"></i> &nbsp; Menu</span>
-            </a>
-            <li class="nested" [ngClass]="{'expand' : showMenu === 'pages' }">
-                <ul class="submenu">
-                    <li>
-                        <a href><span>Submenu</span></a>
+<div class="col-md-3 left_col">
+    <div class="left_col scroll-view">
+        <div class="navbar nav_title" style="border: 0;">
+            <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>Gentellela Alela!</span></a>
+        </div>
+
+        <div class="clearfix"></div>
+
+        <!-- menu profile quick info -->
+        <div class="profile">
+            <div class="profile_pic">
+                <img src="assets/img/SB-admin.png" alt="..." class="img-circle profile_img">
+            </div>
+            <div class="profile_info">
+                <span>Welcome,</span>
+                <h2>John Doe</h2>
+            </div>
+        </div>
+        <!-- /menu profile quick info -->
+
+        <br />
+        <br>
+        <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+            <div class="menu_section">
+                <h3>General</h3>
+                <ul class="nav side-menu">
+                    <li [routerLinkActive]="['active']">
+                        <a routerLink="/dashboard/home">
+                            <i class="fa fa-fw fa-dashboard"></i> Dashboard
+                        </a>
                     </li>
-                    <li>
-                        <a href><span>Submenu</span></a>
+                    <li [routerLinkActive]="['active']">
+                        <a [routerLink]="['chart']">
+                            <i class="fa fa-fw fa-bar-chart-o"></i> Charts
+                        </a>
+                    </li>
+                    <li [routerLinkActive]="['active']">
+                        <a [routerLink]="['tables']">
+                            <i class="fa fa-fw fa-table"></i> Tables
+                        </a>
+                    </li>
+                    <li [routerLinkActive]="['active']">
+                        <a [routerLink]="['forms']">
+                            <i class="fa fa-fw fa-edit"></i> Forms
+                        </a>
+                    </li>
+                    <li [routerLinkActive]="['active']">
+                        <a [routerLink]="['element']">
+                            <i class="fa fa-fw fa-desktop"></i> Bootstrap Elements
+                        </a>
+                    </li>
+                    <li [routerLinkActive]="['active']">
+                        <a [routerLink]="['grid']">
+                            <i class="fa fa-fw fa-wrench"></i> Bootstrap Grid
+                        </a>
+                    </li>
+                    <li [routerLinkActive]="['active']">
+                        <a [routerLink]="['components']">
+                            <i class="fa fa-th-list"></i> &nbsp;Component
+                        </a>
                     </li>
                 </ul>
-            </li>
+            </div>
+            <div class="menu_section">
+                <h3>Live On</h3>
+                <ul class="nav side-menu">
+                    <li><a><i class="fa fa-bug"></i> Additional Pages <span class="fa fa-chevron-down"></span></a>
+                        <ul class="nav child_menu">
+                            <li><a href="e_commerce.html">E-commerce</a></li>
+                            <li><a href="e_commerce_backend.html">E-commerce Backend</a></li>
+                            <li><a href="projects.html">Projects</a></li>
+                            <li><a href="project_detail.html">Project Detail</a></li>
+                            <li><a href="contacts.html">Contacts</a></li>
+                            <li><a href="profile.html">Profile</a></li>
+                            <li><a href="real_estate.html">Real Estate</a></li>
+
+                        </ul>
+                    </li>
+                    <li><a><i class="fa fa-windows"></i> Extras <span class="fa fa-chevron-down"></span></a>
+                        <ul class="nav child_menu">
+                            <li><a href="page_404.html">404 Error</a></li>
+                            <li><a href="page_500.html">500 Error</a></li>
+                            <li><a href="coming_soon.html">Coming Soon</a></li>
+                            <li><a href="plain_page.html">Plain Page</a></li>
+                            <li><a href="login.html">Login Page</a></li>
+                            <li><a href="sign_up.html">SignUp Page</a></li>
+                            <li><a href="pricing_tables.html">Pricing Tables</a></li>
+
+                        </ul>
+                    </li>
+                    <li><a><i class="fa fa-laptop"></i> Landing Page <span class="label label-success pull-right">Coming Soon</span></a></li>
+                </ul>
+            </div>
+
         </div>
-        <a [routerLink]="['blankpage']" [routerLinkActive]="['router-link-active']" class="list-group-item">
-            <i class="fa fa-file-o"></i> &nbsp;BlankPage
-        </a>
-        <a class="list-group-item more-themes" href="http://www.strapui.com/" >
-            More Themes
-        </a>
-    </ul>
-</nav>
+
+        <div class="sidebar-footer hidden-small">
+            <a data-toggle="tooltip" data-placement="top" title="Settings">
+                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+            </a>
+            <a data-toggle="tooltip" data-placement="top" title="FullScreen">
+                <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+            </a>
+            <a data-toggle="tooltip" data-placement="top" title="Lock">
+                <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+            </a>
+            <a data-toggle="tooltip" data-placement="top" title="Logout">
+                <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+            </a>
+        </div>
+    </div>
+</div>

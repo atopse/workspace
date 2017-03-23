@@ -15,8 +15,7 @@ import { BSElementModule } from './bs-element/bsElement.module';
 
 import { DashboardComponent } from './dashboard.component';
 
-import {TopNavComponent} from '../shared/index';
-import {SidebarComponent} from '../shared/index';
+import {TopNavComponent,SidebarComponent,FooterComponent} from '../shared/index'; 
 
 
 @NgModule({
@@ -34,8 +33,8 @@ import {SidebarComponent} from '../shared/index';
         BSElementModule,
         BlankPageModule
     ],
-    declarations: [DashboardComponent, TopNavComponent, SidebarComponent],
-    exports: [DashboardComponent, TopNavComponent, SidebarComponent]
+    declarations: [DashboardComponent, TopNavComponent, SidebarComponent,FooterComponent],
+    exports: [DashboardComponent, TopNavComponent, SidebarComponent,FooterComponent]
 })
 
 export class DashboardModule { }

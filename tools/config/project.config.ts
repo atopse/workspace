@@ -24,6 +24,9 @@ export class ProjectConfig extends SeedConfig {
     this.NPM_DEPENDENCIES = [
       ...this.NPM_DEPENDENCIES,
       { src: 'font-awesome/css/font-awesome.css', inject: true },
+      { src: 'bootstrap/dist/css/bootstrap.css', inject: true },
+      
+      { src: 'animate.css/animate.css', inject: true },
       {src: 'jquery/dist/jquery.min.js', inject: 'libs'},
       { src: 'highcharts/highcharts.js', inject: 'libs' }
       // {src: 'jquery/dist/jquery.min.js', inject: 'libs'},

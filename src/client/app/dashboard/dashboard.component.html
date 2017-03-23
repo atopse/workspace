@@ -1,5 +1,12 @@
-<top-nav></top-nav>
-<sidebar-cmp></sidebar-cmp>
-<section class="main-container" [ngClass]="{sidebarPushRight: isActive}">	
-	<router-outlet></router-outlet>
-</section>
+<div class="container body container-fluid">
+	<div class="main_container">
+		<sidebar-cmp></sidebar-cmp>
+		<top-nav></top-nav>
+		<div class="right_col" role="main" [ngStyle]="{'min-height.px':contentHeight}">
+			<div> 
+				<router-outlet></router-outlet> 
+			</div>
+		</div>
+		<footer-cmp></footer-cmp>
+	</div>
+</div>
