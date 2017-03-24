@@ -1,6 +1,8 @@
-# ATOP-ADMIN
- 
-basic form [SB-Admin-BS4-Angular-2](https://github.com/start-angular/SB-Admin-BS4-Angular-2.git)
+# ADMIN
+
+ATOpse系统管理界面，是独立的前端页面，采用Angular2+Bootstrap3 开发。
+
+项目结构源于 [SB-Admin-BS4-Angular-2](https://github.com/start-angular/SB-Admin-BS4-Angular-2.git)
    
 ## How to start
 
