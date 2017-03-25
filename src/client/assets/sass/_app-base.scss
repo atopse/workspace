@@ -1,3 +1,5 @@
+@import "../bootstrap/bootstrap.scss";
+
 .left_col {
   background: #2A3F54;
 }
@@ -328,6 +330,9 @@ body .container.body .right_col {
 .container {
   width: 100%;
   padding: 0
+}
+.container-fluid {
+  max-width: initial;
 }
 .navbar-nav>li>a, .navbar-brand, .navbar-nav>li>a {
   color: #fff !important;
