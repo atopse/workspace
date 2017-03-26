@@ -24,26 +24,33 @@
             <div class="menu_section">
                 <h3>General</h3>
                 <ul class="nav side-menu">
-                    <li [routerLinkActive]="['active']">
-                        <a routerLink="/dashboard/home">
-                            <i class="fa fa-fw fa-dashboard"></i> Dashboard
-                        </a>
+                    <li [routerLinkActive]="['active']"   [routerLinkActiveOptions]="{exact: true}">
+                        <a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down" ></span></a>
+                        <ul class="nav child_menu" [ngStyle]="{'display':isActive('/dashboard') ? 'block' : 'hidden'}"> 
+                            <li [routerLinkActive]="['current-page']">
+                                <a routerLink="/dashboard/home">
+                                    <i class="fa fa-fw fa-dashboard"></i> Dashboard
+                                </a>
+                            </li>
+                            <li [routerLinkActive]="['current-page']">
+                                <a [routerLink]="['chart']">
+                                    <i class="fa fa-fw fa-bar-chart-o"></i> Charts
+                                </a>
+                            </li>
+                            <li [routerLinkActive]="['current-page']">
+                                <a [routerLink]="['tables']">
+                                    <i class="fa fa-fw fa-table"></i> Tables
+                                </a>
+                            </li>
+                            <li [routerLinkActive]="['current-page']">
+                                <a [routerLink]="['forms']">
+                                    <i class="fa fa-fw fa-edit"></i> Forms
+                                </a>
+                            </li>
+                        </ul>
                     </li>
-                    <li [routerLinkActive]="['active']">
-                        <a [routerLink]="['chart']">
-                            <i class="fa fa-fw fa-bar-chart-o"></i> Charts
-                        </a>
-                    </li>
-                    <li [routerLinkActive]="['active']">
-                        <a [routerLink]="['tables']">
-                            <i class="fa fa-fw fa-table"></i> Tables
-                        </a>
-                    </li>
-                    <li [routerLinkActive]="['active']">
-                        <a [routerLink]="['forms']">
-                            <i class="fa fa-fw fa-edit"></i> Forms
-                        </a>
-                    </li>
+
+
                     <li [routerLinkActive]="['active']">
                         <a [routerLink]="['element']">
                             <i class="fa fa-fw fa-desktop"></i> Bootstrap Elements
