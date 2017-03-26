@@ -24,48 +24,49 @@
             <div class="menu_section">
                 <h3>General</h3>
                 <ul class="nav side-menu">
-                    <li [routerLinkActive]="['active']"   [routerLinkActiveOptions]="{exact: true}">
+                    <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
                         <a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down" ></span></a>
-                        <ul class="nav child_menu" [ngStyle]="{'display':isActive('/dashboard') ? 'block' : 'hidden'}"> 
+                        <ul class="nav child_menu" [ngStyle]="{'display':isActive('/dashboard') ? 'block' : 'hidden'}">
                             <li [routerLinkActive]="['current-page']">
-                                <a routerLink="/dashboard/home">
+                                <a routerLink="/dashboard/demo/home">
                                     <i class="fa fa-fw fa-dashboard"></i> Dashboard
                                 </a>
                             </li>
                             <li [routerLinkActive]="['current-page']">
-                                <a [routerLink]="['chart']">
+                                <a [routerLink]="['/dashboard/demo/chart']">
                                     <i class="fa fa-fw fa-bar-chart-o"></i> Charts
                                 </a>
                             </li>
                             <li [routerLinkActive]="['current-page']">
-                                <a [routerLink]="['tables']">
+                                <a [routerLink]="['/dashboard/demo/tables']">
                                     <i class="fa fa-fw fa-table"></i> Tables
                                 </a>
                             </li>
                             <li [routerLinkActive]="['current-page']">
-                                <a [routerLink]="['forms']">
+                                <a [routerLink]="['/dashboard/demo/forms']">
                                     <i class="fa fa-fw fa-edit"></i> Forms
+                                </a>
+                            </li>
+                            <li [routerLinkActive]="['active']">
+                                <a [routerLink]="['/dashboard/demo/element']">
+                                    <i class="fa fa-fw fa-desktop"></i> Bootstrap Elements
+                                </a>
+                            </li>
+                            <li [routerLinkActive]="['active']">
+                                <a [routerLink]="['/dashboard/demo/grid']">
+                                    <i class="fa fa-fw fa-wrench"></i> Bootstrap Grid
+                                </a>
+                            </li>
+                            <li [routerLinkActive]="['active']">
+                                <a [routerLink]="['/dashboard/demo/components']">
+                                    <i class="fa fa-th-list"></i> &nbsp;Component
                                 </a>
                             </li>
                         </ul>
                     </li>
 
 
-                    <li [routerLinkActive]="['active']">
-                        <a [routerLink]="['element']">
-                            <i class="fa fa-fw fa-desktop"></i> Bootstrap Elements
-                        </a>
-                    </li>
-                    <li [routerLinkActive]="['active']">
-                        <a [routerLink]="['grid']">
-                            <i class="fa fa-fw fa-wrench"></i> Bootstrap Grid
-                        </a>
-                    </li>
-                    <li [routerLinkActive]="['active']">
-                        <a [routerLink]="['components']">
-                            <i class="fa fa-th-list"></i> &nbsp;Component
-                        </a>
-                    </li>
+
                 </ul>
             </div>
             <div class="menu_section">
