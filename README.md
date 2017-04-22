@@ -1,15 +1,15 @@
 # Introduction
 
-[![Angular Style Guide](https://mgechev.github.io/angular2-style-guide/images/badge.svg)](https://angular.io/styleguide)
-[![Build Status](https://travis-ci.org/mgechev/angular-seed.svg?branch=master)](https://travis-ci.org/mgechev/angular-seed)
-[![Build Status](https://ci.appveyor.com/api/projects/status/jg5vg36w0klpa00e/branch/master?svg=true)](https://ci.appveyor.com/project/mgechev/angular2-seed)
-[![Join the chat at https://gitter.im/mgechev/angular2-seed](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/mgechev/angular2-seed?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-[![Dependency Status](https://david-dm.org/mgechev/angular-seed.svg)](https://david-dm.org/mgechev/angular-seed)
-[![devDependency Status](https://david-dm.org/mgechev/angular-seed/dev-status.svg)](https://david-dm.org/mgechev/angular-seed#info=devDependencies)
+[![Angular Style Guide](https://atopse.github.io/angular2-style-guide/images/badge.svg)](https://angular.io/styleguide)
+[![Build Status](https://travis-ci.org/atopse/admin.svg?branch=master)](https://travis-ci.org/atopse/admin)
+[![Build Status](https://ci.appveyor.com/api/projects/status/jg5vg36w0klpa00e/branch/master?svg=true)](https://ci.appveyor.com/project/atopse/admin)
+[![Join the chat at https://gitter.im/atopse/admin](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/atopse/admin?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Dependency Status](https://david-dm.org/atopse/admin.svg)](https://david-dm.org/atopse/admin)
+[![devDependency Status](https://david-dm.org/atopse/admin/dev-status.svg)](https://david-dm.org/atopse/admin#info=devDependencies)
 
 Provides fast, reliable and extensible starter for the development of Angular projects.
 
-`angular-seed` provides the following features:
+`admin` provides the following features:
 
 - Allows you to painlessly update the seed tasks of your already existing project.
 - Supports multiple Angular applications with shared codebase in a single instance of the seed.
@@ -31,14 +31,14 @@ Provides fast, reliable and extensible starter for the development of Angular pr
 
 **Note** that this seed project requires node v4.x.x or higher and npm 2.14.7 but in order to be able to take advantage of the complete functionality we **strongly recommend node >=v6.5.0 and npm >=3.10.3**.
 
-**Here is how to [speed-up the build on Windows](https://github.com/mgechev/angular-seed/wiki/Speed-up-the-build-on-Windows)**.
+**Here is how to [speed-up the build on Windows](https://github.com/atopse/admin/wiki/Speed-up-the-build-on-Windows)**.
 
 In order to start the seed use:
 
 
 ```bash
-$ git clone --depth 1 https://github.com/mgechev/angular-seed.git
-$ cd angular-seed
+$ git clone --depth 1 https://github.com/atopse/admin.git
+$ cd admin
 
 # install the project's dependencies
 $ npm install
@@ -110,8 +110,8 @@ The application provides full Docker support. You can use it for both developmen
 
 The Dockerization infrastructure is described in the `docker-compose.yml` (respectively `docker-compose.production.yml`.
 The application consists of two containers:
-- `angular-seed` - In development mode, this container serves the angular app. In production mode it builds the angular app, with the build artifacts being served by the Nginx container
-- `angular-seed-nginx` - This container is used only production mode. It serves the built angular app with Nginx.
+- `admin` - In development mode, this container serves the angular app. In production mode it builds the angular app, with the build artifacts being served by the Nginx container
+- `admin-nginx` - This container is used only production mode. It serves the built angular app with Nginx.
 
 ## Development build and deployment
 
@@ -130,8 +130,8 @@ Run the following:
 
 ```bash
 $ docker-compose -f docker-compose.production.yml build
-$ docker-compose -f docker-compose.production.yml up angular-seed   # Wait until this container has finished building, as the nginx container is dependent on the production build artifacts
-$ docker-compose -f docker-compose.production.yml up -d angular-seed-nginx  # Start the nginx container in detached mode
+$ docker-compose -f docker-compose.production.yml up admin   # Wait until this container has finished building, as the nginx container is dependent on the production build artifacts
+$ docker-compose -f docker-compose.production.yml up -d admin-nginx  # Start the nginx container in detached mode
 ```
 
 Now open your browser at http://localhost:5555
@@ -196,11 +196,11 @@ A documentation of the provided tools can be found in [tools/README.md](tools/RE
 
 # How to extend?
 
-Visit the [Wiki page](https://github.com/mgechev/angular-seed/wiki) of the project.
+Visit the [Wiki page](https://github.com/atopse/admin/wiki) of the project.
 
 # How to update?
 ```
-git remote add upstream https://github.com/mgechev/angular-seed
+git remote add upstream https://github.com/atopse/admin
 git pull upstream master
 ```
 
@@ -242,11 +242,11 @@ You can learn more about [Protractor Interactive Mode here](https://github.com/a
 
 # Contributing
 
-Please see the [CONTRIBUTING](https://github.com/mgechev/angular-seed/blob/master/.github/CONTRIBUTING.md) file for guidelines.
+Please see the [CONTRIBUTING](https://github.com/atopse/admin/blob/master/.github/CONTRIBUTING.md) file for guidelines.
 
 # Advanced Seed Option
 
-An [advanced option to this seed exists here](https://github.com/NathanWalker/angular-seed-advanced) which mirrors the latest changes here but adds core support for:
+An [advanced option to this seed exists here](https://github.com/NathanWalker/admin-advanced) which mirrors the latest changes here but adds core support for:
 
 - [ngrx/store](https://github.com/ngrx/store) RxJS powered state management, inspired by **Redux**
 - [ngrx/effects](https://github.com/ngrx/effects) Side effect model for @ngrx/store
@@ -255,7 +255,7 @@ An [advanced option to this seed exists here](https://github.com/NathanWalker/an
   - Up to you and your team how you want to utilize it. It can be easily removed if not needed.
 - [angulartics2](https://github.com/angulartics/angulartics2) Vendor-agnostic analytics for Angular applications.
   - Out of box support for [Segment](https://segment.com/)
-    - When using the seed, be sure to change your `write_key` [here](https://github.com/NathanWalker/angular-seed-advanced/blob/master/src/client/index.html#L24)
+    - When using the seed, be sure to change your `write_key` [here](https://github.com/NathanWalker/admin-advanced/blob/master/src/client/index.html#L24)
   - Can be changed to any vendor, [learn more here](https://github.com/angulartics/angulartics2#supported-providers)
 - [lodash](https://lodash.com/) Helps reduce blocks of code down to single lines and enhances readability
 - [NativeScript](https://www.nativescript.org/) cross platform mobile (w/ native UI) apps. [Setup instructions here](#nativescript-app).
@@ -267,19 +267,19 @@ You may use it to learn how to extend this seed for your own use cases or use th
 
 Forks of this project demonstrate how to extend and integrate with other libraries:
 
- - https://github.com/mgechev/switching-to-angular2 - code samples for the book ["Switching to Angular 2"](https://www.packtpub.com/web-development/switching-angular-2).
- - https://github.com/DeviantJS/angular2-seed-postcss - Extending PostCSS with precss / cssnext for Sass-like features.
+ - https://github.com/atopse/switching-to-angular2 - code samples for the book ["Switching to Angular 2"](https://www.packtpub.com/web-development/switching-angular-2).
+ - https://github.com/DeviantJS/admin-postcss - Extending PostCSS with precss / cssnext for Sass-like features.
  - https://github.com/AngularShowcase/angular2-sample-app - sample Angular application.
  - https://github.com/AngularShowcase/ng2-bootstrap-sbadmin - ng2-bootstrap-sbadmin.
- - https://github.com/AngularShowcase/angular2-seed-ng2-highcharts - Simple application including a [Highcharts](http://www.highcharts.com) graph.
+ - https://github.com/AngularShowcase/admin-ng2-highcharts - Simple application including a [Highcharts](http://www.highcharts.com) graph.
  - https://github.com/tarlepp/angular-sailsjs-boilerplate-frontend-angular2 - Example application for [Sails.js](http://sailsjs.org/) integration.
  - https://github.com/ludohenin/ng2-wp-blog - Angular application using Wordpress [JSON-API](http://v2.wp-api.org) backend..
- - https://github.com/AngularShowcase/angular2-seed-example-mashup - Angular application demonstrating the use of [Redux](http://redux.js.org/), [D3](https://github.com/mbostock/d3), [socket io](https://github.com/socketio), [Google Charts](https://developers.google.com/chart/), and [RxJs](https://github.com/Reactive-Extensions/RxJS).
- - https://github.com/tiagomapmarques/angular2-seed-phaser/tree/releases - integration with [Phaser](http://phaser.io/).
- - https://github.com/vyakymenko/angular2-seed-express - integration with [Express](https://expressjs.com/) full-stack development.
+ - https://github.com/AngularShowcase/admin-example-mashup - Angular application demonstrating the use of [Redux](http://redux.js.org/), [D3](https://github.com/mbostock/d3), [socket io](https://github.com/socketio), [Google Charts](https://developers.google.com/chart/), and [RxJs](https://github.com/Reactive-Extensions/RxJS).
+ - https://github.com/tiagomapmarques/admin-phaser/tree/releases - integration with [Phaser](http://phaser.io/).
+ - https://github.com/vyakymenko/admin-express - integration with [Express](https://expressjs.com/) full-stack development.
  - https://github.com/UIUXEngineering/angular2-jspm-typescript-seed - integration with [JSPM](http://jspm.io/).
- - http://ngbot.io - a chat bot built with angular-seed.
- - [angular-seed-inspinia](https://github.com/DmitriyPotapov/angular-seed-inspinia) - integration with custom design template
+ - http://ngbot.io - a chat bot built with admin.
+ - [admin-inspinia](https://github.com/DmitriyPotapov/admin-inspinia) - integration with custom design template
 
 # Directory Structure
 
@@ -469,9 +469,9 @@ Forks of this project demonstrate how to extend and integrate with other librari
 
 # Contributors
 
-[<img alt="mgechev" src="https://avatars2.githubusercontent.com/u/455023?v=3&s=117" width="117">](https://github.com/mgechev) |[<img alt="ludohenin" src="https://avatars3.githubusercontent.com/u/1011516?v=3&s=117" width="117">](https://github.com/ludohenin) |[<img alt="d3viant0ne" src="https://avatars2.githubusercontent.com/u/8420490?v=3&s=117" width="117">](https://github.com/d3viant0ne) |[<img alt="Shyam-Chen" src="https://avatars2.githubusercontent.com/u/13535256?v=3&s=117" width="117">](https://github.com/Shyam-Chen) |[<img alt="Nightapes" src="https://avatars2.githubusercontent.com/u/15911153?v=3&s=117" width="117">](https://github.com/Nightapes) |[<img alt="tarlepp" src="https://avatars1.githubusercontent.com/u/595561?v=3&s=117" width="117">](https://github.com/tarlepp) |
+[<img alt="atopse" src="https://avatars2.githubusercontent.com/u/455023?v=3&s=117" width="117">](https://github.com/atopse) |[<img alt="ludohenin" src="https://avatars3.githubusercontent.com/u/1011516?v=3&s=117" width="117">](https://github.com/ludohenin) |[<img alt="d3viant0ne" src="https://avatars2.githubusercontent.com/u/8420490?v=3&s=117" width="117">](https://github.com/d3viant0ne) |[<img alt="Shyam-Chen" src="https://avatars2.githubusercontent.com/u/13535256?v=3&s=117" width="117">](https://github.com/Shyam-Chen) |[<img alt="Nightapes" src="https://avatars2.githubusercontent.com/u/15911153?v=3&s=117" width="117">](https://github.com/Nightapes) |[<img alt="tarlepp" src="https://avatars1.githubusercontent.com/u/595561?v=3&s=117" width="117">](https://github.com/tarlepp) |
 :---: |:---: |:---: |:---: |:---: |:---: |
-[mgechev](https://github.com/mgechev) |[ludohenin](https://github.com/ludohenin) |[d3viant0ne](https://github.com/d3viant0ne) |[Shyam-Chen](https://github.com/Shyam-Chen) |[Nightapes](https://github.com/Nightapes) |[tarlepp](https://github.com/tarlepp) |
+[atopse](https://github.com/atopse) |[ludohenin](https://github.com/ludohenin) |[d3viant0ne](https://github.com/d3viant0ne) |[Shyam-Chen](https://github.com/Shyam-Chen) |[Nightapes](https://github.com/Nightapes) |[tarlepp](https://github.com/tarlepp) |
 
 [<img alt="NathanWalker" src="https://avatars1.githubusercontent.com/u/457187?v=3&s=117" width="117">](https://github.com/NathanWalker) |[<img alt="TheDonDope" src="https://avatars1.githubusercontent.com/u/1188033?v=3&s=117" width="117">](https://github.com/TheDonDope) |[<img alt="robstoll" src="https://avatars2.githubusercontent.com/u/5557885?v=3&s=117" width="117">](https://github.com/robstoll) |[<img alt="hank-ehly" src="https://avatars0.githubusercontent.com/u/11639738?v=3&s=117" width="117">](https://github.com/hank-ehly) |[<img alt="nareshbhatia" src="https://avatars2.githubusercontent.com/u/1220198?v=3&s=117" width="117">](https://github.com/nareshbhatia) |[<img alt="kiuka" src="https://avatars2.githubusercontent.com/u/11283191?v=3&s=117" width="117">](https://github.com/kiuka) |
 :---: |:---: |:---: |:---: |:---: |:---: |

@@ -43,8 +43,8 @@
     "compodoc": "node_modules/.bin/compodoc -p src/client/tsconfig.json",
     "serve.compodoc": "node_modules/.bin/compodoc -s"
   },
-  "author": "Minko Gechev <mgechev>",
-  "license": "MIT",
+  "author": "Yu Shuangqi <ysqi>",
+  "license": "AGPL-3.0",
   "devDependencies": {
     "@angular/compiler-cli": "^4.0.0",
     "@angular/platform-server": "^4.0.0",

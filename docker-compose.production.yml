@@ -2,21 +2,21 @@ version: '2'
 
 services:
 
-  angular-seed:
+  admin:
     build:
       context: .
-      dockerfile: ./.docker/angular-seed.production.dockerfile
+      dockerfile: ./.docker/admin.production.dockerfile
     command: npm run build.prod
-    container_name: angular-seed-build-prod
-    image: angular-seed
+    container_name: admin-build-prod
+    image: admin
     networks:
       - prod-network
     volumes:
-      - ./dist:/home/app/angular-seed/dist
+      - ./dist:/home/app/admin/dist
 
-  angular-seed-nginx:
-    command: /bin/bash -c "envsubst '$$NGINX_HOST $$NGINX_PORT' < /etc/nginx/conf.d/angular-seed.template > /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'"
-    container_name: angular-seed-nginx-prod
+  admin-nginx:
+    command: /bin/bash -c "envsubst '$$NGINX_HOST $$NGINX_PORT' < /etc/nginx/conf.d/admin.template > /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'"
+    container_name: admin-nginx-prod
     environment:
       - NGINX_HOST=localhost
       - NGINX_PORT=80
@@ -26,7 +26,7 @@ services:
     ports:
       - '5555:80'
     volumes:
-      - ./.docker/nginx.conf:/etc/nginx/conf.d/angular-seed.template
+      - ./.docker/nginx.conf:/etc/nginx/conf.d/admin.template
       - ./dist/prod:/var/www/dist/prod
 
 networks:

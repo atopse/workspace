@@ -2,13 +2,13 @@ version: '2'
 
 services:
 
-  angular-seed:
+  admin:
     build:
       context: .
-      dockerfile: ./.docker/angular-seed.development.dockerfile
+      dockerfile: ./.docker/admin.development.dockerfile
     command: npm start
-    container_name: angular-seed-start
-    image: angular-seed
+    container_name: admin-start
+    image: admin
     networks:
       - dev-network
     ports:
