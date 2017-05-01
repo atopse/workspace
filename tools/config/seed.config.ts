@@ -144,7 +144,7 @@ export class SeedConfig {
    * `index.html`.
    * @type {string}
    */
-  APP_TITLE = 'Welcome to admin!';
+  APP_TITLE = 'ATOPSE';
 
   /**
    * Tracking ID.
