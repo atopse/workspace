@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
  */
 @Component({
   moduleId: module.id,
-  selector: 'app-home',
+  selector: 'atopse-home',
   templateUrl: './home.component.html',
   styles: ['home.component.css'],
 })

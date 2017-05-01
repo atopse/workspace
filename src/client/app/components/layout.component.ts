@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 @Component({
     moduleId:module.id,
-    selector: 'app-layout',
+    selector: 'atopse-layout',
     templateUrl:'layout.component.html',
     // template: require(''),
     styleUrls: ['layout.component.css']

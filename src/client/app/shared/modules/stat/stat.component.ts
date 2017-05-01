@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
-    selector: 'app-stat',
+    selector: 'atopse-stat',
     template: './stat.component.html',
     styles: ['./stat.component.scss']
 })
