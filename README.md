@@ -1,14 +1,14 @@
 # Introduction
 
 [![Angular Style Guide](https://mgechev.github.io/angular2-style-guide/images/badge.svg)](https://angular.io/styleguide)
-[![Build Status](https://travis-ci.org/atopse/admin.svg?branch=master)](https://travis-ci.org/atopse/admin)
-[![Build Status](https://ci.appveyor.com/api/projects/status/jg5vg36w0klpa00e/branch/master?svg=true)](https://ci.appveyor.com/project/atopse/admin)
-[![Dependency Status](https://david-dm.org/atopse/admin.svg)](https://david-dm.org/atopse/admin)
-[![devDependency Status](https://david-dm.org/atopse/admin/dev-status.svg)](https://david-dm.org/atopse/admin#info=devDependencies)
+[![Build Status](https://travis-ci.org/atopse/workspace.svg?branch=master)](https://travis-ci.org/atopse/workspace)
+[![Build Status](https://ci.appveyor.com/api/projects/status/jg5vg36w0klpa00e/branch/master?svg=true)](https://ci.appveyor.com/project/atopse/workspace)
+[![Dependency Status](https://david-dm.org/atopse/workspace.svg)](https://david-dm.org/atopse/workspace)
+[![devDependency Status](https://david-dm.org/atopse/workspace/dev-status.svg)](https://david-dm.org/atopse/workspace#info=devDependencies)
 
 Provides fast, reliable and extensible starter for the development of Angular projects.
 
-`admin` provides the following features:
+`workspace` provides the following features:
 
 - Allows you to painlessly update the seed tasks of your already existing project.
 - Supports multiple Angular applications with shared codebase in a single instance of the seed.
@@ -30,14 +30,14 @@ Provides fast, reliable and extensible starter for the development of Angular pr
 
 **Note** that this seed project requires node v4.x.x or higher and npm 2.14.7 but in order to be able to take advantage of the complete functionality we **strongly recommend node >=v6.5.0 and npm >=3.10.3**.
 
-**Here is how to [speed-up the build on Windows](https://github.com/atopse/admin/wiki/Speed-up-the-build-on-Windows)**.
+**Here is how to [speed-up the build on Windows](https://github.com/atopse/workspace/wiki/Speed-up-the-build-on-Windows)**.
 
 In order to start the seed use:
 
 
 ```bash
-$ git clone --depth 1 https://github.com/atopse/admin.git
-$ cd admin
+$ git clone --depth 1 https://github.com/atopse/workspace.git
+$ cd workspace
 
 # install the project's dependencies
 $ npm install
@@ -109,8 +109,8 @@ The application provides full Docker support. You can use it for both developmen
 
 The Dockerization infrastructure is described in the `docker-compose.yml` (respectively `docker-compose.production.yml`.
 The application consists of two containers:
-- `admin` - In development mode, this container serves the angular app. In production mode it builds the angular app, with the build artifacts being served by the Nginx container
-- `admin-nginx` - This container is used only production mode. It serves the built angular app with Nginx.
+- `workspace` - In development mode, this container serves the angular app. In production mode it builds the angular app, with the build artifacts being served by the Nginx container
+- `workspace-nginx` - This container is used only production mode. It serves the built angular app with Nginx.
 
 ## Development build and deployment
 
@@ -129,8 +129,8 @@ Run the following:
 
 ```bash
 $ docker-compose -f docker-compose.production.yml build
-$ docker-compose -f docker-compose.production.yml up admin   # Wait until this container has finished building, as the nginx container is dependent on the production build artifacts
-$ docker-compose -f docker-compose.production.yml up -d admin-nginx  # Start the nginx container in detached mode
+$ docker-compose -f docker-compose.production.yml up workspace   # Wait until this container has finished building, as the nginx container is dependent on the production build artifacts
+$ docker-compose -f docker-compose.production.yml up -d workspace-nginx  # Start the nginx container in detached mode
 ```
 
 Now open your browser at http://localhost:5555
@@ -192,7 +192,7 @@ A documentation of the provided tools can be found in [tools/README.md](tools/RE
 
 # How to update?
 ```
-git remote add upstream https://github.com/atopse/admin
+git remote add upstream https://github.com/atopse/workspace
 git pull upstream master
 ```
 
@@ -234,11 +234,11 @@ You can learn more about [Protractor Interactive Mode here](https://github.com/a
 
 # Contributing
 
-Please see the [CONTRIBUTING](https://github.com/atopse/admin/blob/master/.github/CONTRIBUTING.md) file for guidelines.
+Please see the [CONTRIBUTING](https://github.com/atopse/workspace/blob/master/.github/CONTRIBUTING.md) file for guidelines.
 
 # Advanced Seed Option
 
-An [advanced option to this seed exists here](https://github.com/NathanWalker/admin-advanced) which mirrors the latest changes here but adds core support for:
+An [advanced option to this seed exists here](https://github.com/NathanWalker/workspace-advanced) which mirrors the latest changes here but adds core support for:
 
 - [ngrx/store](https://github.com/ngrx/store) RxJS powered state management, inspired by **Redux**
 - [ngrx/effects](https://github.com/ngrx/effects) Side effect model for @ngrx/store
@@ -247,7 +247,7 @@ An [advanced option to this seed exists here](https://github.com/NathanWalker/ad
   - Up to you and your team how you want to utilize it. It can be easily removed if not needed.
 - [angulartics2](https://github.com/angulartics/angulartics2) Vendor-agnostic analytics for Angular applications.
   - Out of box support for [Segment](https://segment.com/)
-    - When using the seed, be sure to change your `write_key` [here](https://github.com/NathanWalker/admin-advanced/blob/master/src/client/index.html#L24)
+    - When using the seed, be sure to change your `write_key` [here](https://github.com/NathanWalker/workspace-advanced/blob/master/src/client/index.html#L24)
   - Can be changed to any vendor, [learn more here](https://github.com/angulartics/angulartics2#supported-providers)
 - [lodash](https://lodash.com/) Helps reduce blocks of code down to single lines and enhances readability
 - [NativeScript](https://www.nativescript.org/) cross platform mobile (w/ native UI) apps. [Setup instructions here](#nativescript-app).
