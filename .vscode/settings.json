@@ -5,5 +5,15 @@
     "**/coverage_js": true,
     "**/coverage": true,
     "**/dist": true
+  },
+  "files.exclude": {
+    "**/tmp/**": true,
+    "**/node_modules/**": true, 
+    "**/dist/**": true
+  },
+  "files.watcherExclude": {
+    "**/tmp/**": true,
+    "**/node_modules/**": true, 
+    "**/dist/**": true
   }
 }
