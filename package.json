@@ -46,6 +46,7 @@
   "author": "Yu Shuangqi <ysqi>",
   "license": "AGPL-3.0",
   "devDependencies": {
+    "@angular/cli": "^1.0.1",
     "@angular/compiler-cli": "^4.0.0",
     "@angular/platform-server": "^4.0.0",
     "@compodoc/compodoc": "^1.0.0-beta.7",
