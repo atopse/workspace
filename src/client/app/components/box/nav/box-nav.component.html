@@ -1,0 +1,17 @@
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a routerLink="/box" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:
+true}" class="nav-link"> 
+       魔盒
+    </a>
+  </li>
+  <li class="nav-item">
+    <a routerLink="/box/driver" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:
+true}" class="nav-link"> 
+      驱动器
+    </a>
+  </li> 
+</ul>
+<div class="tab-content">
+   <router-outlet></router-outlet> 
+</div>

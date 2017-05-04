@@ -1,0 +1,35 @@
+ <div class="card-deck">
+  <div class="card" *ngFor="let driver of drivers">
+    <!--<img class="card-img-top" src="" alt="{{driver.title}}">-->
+    <div class="card-block">
+      <h4 class="card-title">{{driver.title}}</h4>
+      <p class="card-text">
+        {{driver.desc}}
+      </p>
+      <ngb-accordion  >
+        <ngb-panel title="Option">
+          <ng-template ngbPanelContent>
+            
+          </ng-template>
+        </ngb-panel>
+        <ngb-panel title="Actions">
+          <ng-template ngbPanelContent>
+            <ul class="list-group">
+                <li *ngFor="let action of driver.actions" class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">
+                  {{action.title}}({{action.namespace}})
+                  <small>{{action.desc}}</small>
+                  <!--<span class="badge badge-default badge-pill">14</span>-->
+                </li>
+              </ul>
+          </ng-template>
+        </ngb-panel>
+      </ngb-accordion>
+      
+
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">{{driver.namespace}}</small>
+    </div>
+  </div>
+
+</div>

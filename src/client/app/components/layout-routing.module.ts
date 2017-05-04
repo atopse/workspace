@@ -3,13 +3,14 @@ import { Routes, RouterModule } from '@angular/router';
 import { LayoutComponent } from './layout.component';
 
 import { HomeModule} from './home/home.module'
-
+import {  BoxRoutes } from './box/box-routing.module'
 const routes: Routes = [
     {
         path: '', 
         component: LayoutComponent,
         children: [
             {path:"dashboard",loadChildren:'./app/components/home/home.module#HomeModule'},
+            ...BoxRoutes
             // { path: 'dashboard', loadChildren: './dashboard/dashboard.module#DashboardModule' },
             // { path: 'charts', loadChildren: './charts/charts.module#ChartsModule' },
             // { path: 'tables', loadChildren: './tables/tables.module#TablesModule' },

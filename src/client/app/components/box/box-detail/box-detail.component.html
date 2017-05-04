@@ -1,0 +1,27 @@
+ <div class="card"> 
+    <div class="card-block">
+      <h4 class="card-title">{{box.title}}</h4>
+      <p class="card-text">
+        {{box.desc}}
+      </p>
+      <ngb-accordion  >
+        <ngb-panel title="Option">
+          <ng-template ngbPanelContent>
+            
+          </ng-template>
+        </ngb-panel>
+        <ngb-panel title="Actions">
+          <ng-template ngbPanelContent>
+            <ul class="list-group">
+                <li *ngFor="let action of box.actions" class="list-group-item list-group-item-action">
+                  <div class="text-primary">{{action.driver}}.</div><div class="text-info">{{action.action}}</div> 
+                </li>
+              </ul>
+          </ng-template>
+        </ngb-panel>
+      </ngb-accordion> 
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">{{box.namespace}}</small>
+    </div>
+  </div>
