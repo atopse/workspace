@@ -1,16 +1,15 @@
- <div class="card"> 
+ <div class="card" *ngIf="box"> 
     <div class="card-block">
       <h4 class="card-title">{{box.title}}</h4>
       <p class="card-text">
         {{box.desc}}
       </p>
-      <ngb-accordion  >
-        <ngb-panel title="Option">
-          <ng-template ngbPanelContent>
-            
+      <ngb-accordion  activeIds="['p_Option','p_Actions']" >
+        <ngb-panel id="p_Option" title="Option">
+          <ng-template ngbPanelContent> 
           </ng-template>
         </ngb-panel>
-        <ngb-panel title="Actions">
+        <ngb-panel id="p_Actions" title="Actions"  >
           <ng-template ngbPanelContent>
             <ul class="list-group">
                 <li *ngFor="let action of box.actions" class="list-group-item list-group-item-action">

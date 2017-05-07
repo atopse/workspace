@@ -1,3 +1,19 @@
- <div class="card-deck">
-     <atopse-box-detail [box]="box"  *ngFor="let box of boxs"></atopse-box-detail> 
-</div>
+<div class="card-deck">
+    <!--<atopse-box-detail [box]="box" ></atopse-box-detail> -->
+    <div class="card" *ngFor="let box of boxs">
+        <div class="card-block">
+            <h4 class="card-title">{{box.title}}</h4>
+            <p class="card-text">
+                {{box.desc}}
+            </p>
+        </div>
+        <div class="card-footer">
+            <small class="text-muted">{{box.namespace}}</small>
+            <small class="float-right">
+          <button type="button" class="btn btn-secondary" (click)="onSelect(box)">
+            ...
+        </button>
+</small>
+        </div>
+    </div>
+</div> 
